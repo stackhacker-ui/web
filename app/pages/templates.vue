@@ -48,13 +48,10 @@ const templates: Template[] = [
     name: "Landing",
     description: "A lightweight landing page starter powered by Nuxt Content.",
     features: ["Features, pricing, and FAQ sections", "Nuxt Content support", "Responsive layout"],
-    status: "coming-soon",
-  },
-  {
-    name: "Dashboard",
-    description: "A flexible dashboard starter for building data-heavy Nuxt interfaces.",
-    features: ["Charts and date-picker support", "Multi-column layout", "Light and dark mode"],
-    status: "coming-soon",
+    preview: "https://landing-template.stackhacker.io/",
+    github: "https://github.com/stackhacker-ui/landing",
+    status: "available",
+    image: { light: "/templates/landing-light.png", dark: "/templates/landing-dark.png" },
   },
 ];
 </script>
