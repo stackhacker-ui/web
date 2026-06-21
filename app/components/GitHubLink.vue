@@ -28,9 +28,9 @@ interface RepoResponse {
 }
 
 const { data } = await useAsyncData<RepoResponse | null>("github-stars", async () => {
-  const repoPath = new URL(siteConfig.links.github).pathname.slice(1);
-
   try {
+    const repoPath = new URL(siteConfig.links.github).pathname.replace(/^\//, "");
+
     return await $fetch<RepoResponse>(`https://ungh.cc/repos/${repoPath}`, {
       timeout: 3000,
     });
