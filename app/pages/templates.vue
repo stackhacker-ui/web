@@ -27,15 +27,6 @@ interface Template {
 
 const templates: Template[] = [
   {
-    name: "Chat",
-    description: "An open chat app starter for Nuxt with practical patterns you can adapt.",
-    features: ["GitHub authentication", "Persistent chat history", "Streaming AI responses"],
-    preview: "https://chat-template.stackhacker.io",
-    github: "https://github.com/stackhacker-ui/chat",
-    status: "available",
-    image: { light: "/templates/chat-light.png", dark: "/templates/chat-dark.png" },
-  },
-  {
     name: "Starter",
     description: "A minimal Nuxt starter to begin quickly with shadcn-vue.",
     features: ["Nuxt setup included", "ESLint setup included", "shadcn-vue setup included"],
@@ -45,16 +36,49 @@ const templates: Template[] = [
     image: { light: "/templates/starter-light.png", dark: "/templates/starter-dark.png" },
   },
   {
-    name: "Landing",
-    description: "A lightweight landing page starter powered by Nuxt Content.",
-    features: ["Features, pricing, and FAQ sections", "Nuxt Content support", "Responsive layout"],
+    name: "Chat",
+    description: "An open chat app starter for Nuxt with practical patterns you can adapt.",
+    features: ["GitHub authentication", "Persistent chat history", "Streaming AI responses"],
+    preview: "https://chat-template.stackhacker.io",
+    github: "https://github.com/stackhacker-ui/chat",
+    status: "available",
+    image: { light: "/templates/chat-light.png", dark: "/templates/chat-dark.png" },
+  },
+  {
+    name: "Docs",
+    description: "A documentation template for product guides, references, and content-heavy sites.",
+    features: ["Content-first structure", "Documentation navigation", "Responsive reading layout"],
     status: "coming-soon",
   },
   {
-    name: "Dashboard",
-    description: "A flexible dashboard starter for building data-heavy Nuxt interfaces.",
-    features: ["Charts and date-picker support", "Multi-column layout", "Light and dark mode"],
+    name: "Landing",
+    description: "A lightweight landing page starter powered by Nuxt Content.",
+    features: ["Features, pricing, and FAQ sections", "Nuxt Content support", "Responsive layout"],
+    preview: "https://landing-template.stackhacker.io",
+    github: "https://github.com/stackhacker-ui/landing",
+    status: "available",
+    image: { light: "/templates/landing-light.png", dark: "/templates/landing-dark.png" },
+  },
+  {
+    name: "Portfolio",
+    description: "A polished portfolio template for projects, writing, and personal profiles.",
+    features: ["Project showcase", "Profile-first layout", "Responsive sections"],
     status: "coming-soon",
+  },
+  {
+    name: "SaaS",
+    description: "A SaaS marketing template with product sections and conversion-focused pages.",
+    features: ["Marketing page sections", "Pricing-ready structure", "Responsive layout"],
+    status: "coming-soon",
+  },
+  {
+    name: "Changelog",
+    description: "A changelog template for publishing product updates with a focused release feed.",
+    features: ["Release-focused layout", "GitHub updates integration", "Light and dark previews"],
+    preview: "https://changelog-template.stackhacker.io",
+    github: "https://github.com/stackhacker-ui/changelog",
+    status: "available",
+    image: { light: "/templates/changelog-light.png", dark: "/templates/changelog-dark.png" },
   },
 ];
 </script>

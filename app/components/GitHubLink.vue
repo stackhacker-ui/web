@@ -28,8 +28,10 @@ interface RepoResponse {
 }
 
 const { data } = await useAsyncData<RepoResponse | null>("github-stars", async () => {
+  const repoPath = new URL(siteConfig.links.github).pathname.slice(1);
+
   try {
-    return await $fetch<RepoResponse>("https://ungh.cc/repos/stackhacker-ui/docs", {
+    return await $fetch<RepoResponse>(`https://ungh.cc/repos/${repoPath}`, {
       timeout: 3000,
     });
   }
