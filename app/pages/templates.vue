@@ -75,7 +75,10 @@ const templates: Template[] = [
     name: "SaaS",
     description: "A SaaS marketing template with product sections and conversion-focused pages.",
     features: ["Marketing page sections", "Pricing-ready structure", "Responsive layout"],
-    status: "coming-soon",
+    preview: "https://saas-template.stackhacker.io/",
+    github: "https://github.com/stackhacker-ui/saas",
+    status: "available",
+    image: { light: "/templates/saas-light.png", dark: "/templates/saas-dark.png" },
   },
   {
     name: "Changelog",
