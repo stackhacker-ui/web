@@ -66,7 +66,10 @@ const templates: Template[] = [
     name: "Portfolio",
     description: "A polished portfolio template for projects, writing, and personal profiles.",
     features: ["Project showcase", "Profile-first layout", "Responsive sections"],
-    status: "coming-soon",
+    preview: "https://portfolio-template.stackhacker.io/",
+    github: "https://github.com/stackhacker-ui/portfolio",
+    status: "available",
+    image: { light: "/templates/portfolio-light.png", dark: "/templates/portfolio-dark.png" },
   },
   {
     name: "SaaS",
