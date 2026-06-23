@@ -48,7 +48,10 @@ const templates: Template[] = [
     name: "Docs",
     description: "A documentation template for product guides, references, and content-heavy sites.",
     features: ["Content-first structure", "Documentation navigation", "Responsive reading layout"],
-    status: "coming-soon",
+    preview: "https://docs-template.stackhacker.io/",
+    github: "https://github.com/stackhacker-ui/docs",
+    status: "available",
+    image: { light: "/templates/docs-light.png", dark: "/templates/docs-dark.png" },
   },
   {
     name: "Landing",
