@@ -25,8 +25,17 @@ import { x } from "tinyexec";
   const registryJson = await generateShadcnRegistry(config);
 
   const customItemNames = new Set(registryJson.items.map(item => item.name));
+  const itemPackageDependencies: Record<string, string[]> = {
+    "chat-message": ["@lucide/vue"],
+  };
+
   for (const item of registryJson.items) {
+    const dependencies = new Set(item.dependencies ?? []);
     const registryDependencies = new Set(item.registryDependencies ?? []);
+
+    for (const dependency of itemPackageDependencies[item.name] ?? []) {
+      dependencies.add(dependency);
+    }
 
     for (const file of item.files) {
       const filePath = resolve(registryPath, file.path);
@@ -43,6 +52,7 @@ import { x } from "tinyexec";
       }
     }
 
+    item.dependencies = [...dependencies];
     item.registryDependencies = [...registryDependencies].map((dependency) => {
       if (!customItemNames.has(dependency)) return dependency;
       return `${config.homepage}/r/${dependency}.json`;

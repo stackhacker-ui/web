@@ -19,7 +19,7 @@ This project aims to make shadcn-vue easier to use in Nuxt by providing:
 Install an item with the shadcn-vue CLI:
 
 ```bash
-npx shadcn-vue@latest add "https://ui.stackhacker.io/r/lucide-icon.json"
+npx shadcn-vue@latest add "https://ui.stackhacker.io/r/chat-messages.json"
 ```
 
 ## Local development

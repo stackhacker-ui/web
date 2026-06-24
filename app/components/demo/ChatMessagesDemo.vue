@@ -1,5 +1,11 @@
 <script setup lang="ts">
+import { Copy, RotateCcw } from "@lucide/vue";
 import { ChatMessages } from "~/registry/blocks/chat-messages";
+
+const assistantActions = [
+  { label: "Copy message", icon: Copy },
+  { label: "Retry message", icon: RotateCcw },
+];
 
 const messages = ref([
   {
@@ -34,6 +40,7 @@ const messages = ref([
     <ChatMessages
       :messages="messages"
       status="ready"
+      :assistant="{ actions: assistantActions }"
     />
   </div>
 </template>
