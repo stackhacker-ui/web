@@ -1,14 +1,13 @@
 <script setup lang="ts">
-import type { HTMLAttributes } from "vue";
+import type { Component, HTMLAttributes } from "vue";
 import type { UIMessage } from "ai";
 import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import { LucideIcon } from "@/components/ui/lucide-icon";
 import { cn } from "@/lib/utils";
 
 export interface ChatMessageAction {
   label: string;
-  icon: string;
+  icon: Component;
   onClick?: (e: MouseEvent, message: UIMessage) => void;
 }
 
@@ -92,8 +91,8 @@ function handleAction(e: MouseEvent, action: ChatMessageAction) {
                 :aria-label="action.label"
                 @click="handleAction($event, action)"
               >
-                <LucideIcon
-                  :name="action.icon"
+                <component
+                  :is="action.icon"
                   class="size-3.5"
                 />
               </Button>

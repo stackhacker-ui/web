@@ -75,10 +75,6 @@ const stackhackerRegistryUrl = `${expectedHomepage}/r`;
 const stackhackerDependency = (name: string) => `${stackhackerRegistryUrl}/${name}.json`;
 
 const expectedItems: Record<string, ExpectedRegistryItem> = {
-  "lucide-icon": {
-    dependencies: ["@lucide/vue"],
-    registryDependencies: [],
-  },
   "chat-prompt-submit": {
     dependencies: ["@lucide/vue"],
     registryDependencies: ["button"],
@@ -92,8 +88,8 @@ const expectedItems: Record<string, ExpectedRegistryItem> = {
     registryDependencies: ["button", stackhackerDependency("chat-message")],
   },
   "chat-message": {
-    dependencies: ["ai"],
-    registryDependencies: ["button", stackhackerDependency("lucide-icon"), "tooltip"],
+    dependencies: ["@lucide/vue", "ai"],
+    registryDependencies: ["button", "tooltip"],
   },
 };
 
