@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { HTMLAttributes } from "vue";
+import { nextTick, onMounted, ref, watch, type HTMLAttributes } from "vue";
 import { cn } from "@/lib/utils";
 
 export interface ChatPromptProps {

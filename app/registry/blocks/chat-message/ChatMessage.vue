@@ -89,6 +89,7 @@ function handleAction(e: MouseEvent, action: ChatMessageAction) {
               <Button
                 variant="ghost"
                 size="icon-sm"
+                :aria-label="action.label"
                 @click="handleAction($event, action)"
               >
                 <LucideIcon

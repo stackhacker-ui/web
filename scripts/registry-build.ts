@@ -1,6 +1,6 @@
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { mkdir, unlink, writeFile } from "node:fs/promises";
+import { mkdir, readFile, unlink, writeFile } from "node:fs/promises";
 import pkg from "../package.json";
 import components from "../components.json";
 import { generateShadcnRegistry } from "shadcn-vue-registry";
@@ -23,6 +23,31 @@ import { x } from "tinyexec";
   };
 
   const registryJson = await generateShadcnRegistry(config);
+
+  const customItemNames = new Set(registryJson.items.map(item => item.name));
+  for (const item of registryJson.items) {
+    const registryDependencies = new Set(item.registryDependencies ?? []);
+
+    for (const file of item.files) {
+      const filePath = resolve(registryPath, file.path);
+      const content = await readFile(filePath, "utf8").catch(() => "");
+
+      for (const dependency of customItemNames) {
+        if (dependency === item.name) continue;
+        if (
+          content.includes(`../${dependency}`)
+          || content.includes(`@/components/${dependency}`)
+        ) {
+          registryDependencies.add(dependency);
+        }
+      }
+    }
+
+    item.registryDependencies = [...registryDependencies].map((dependency) => {
+      if (!customItemNames.has(dependency)) return dependency;
+      return `${config.homepage}/r/${dependency}.json`;
+    });
+  }
 
   const registryJsonPath = resolve(registryPath, "registry.json");
   await mkdir(dirname(registryJsonPath), { recursive: true });

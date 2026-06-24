@@ -8,6 +8,7 @@ dist
 
 # Generated shadcn registry output
 public/r/
+app/registry/registry.json
 
 # Node dependencies
 node_modules
