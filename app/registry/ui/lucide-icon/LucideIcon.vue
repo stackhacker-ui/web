@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { Component } from "vue";
-import { icons } from "lucide-vue-next";
+import { computed } from "vue";
+import { icons } from "@lucide/vue";
 
 export interface LucideIconProps {
   /** Icon identifier - accepts `i-lucide-*` style names or Vue components */

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { HTMLAttributes } from "vue";
-import { ArrowUp, RotateCcw, Square } from "lucide-vue-next";
+import { computed, type HTMLAttributes } from "vue";
+import { ArrowUp, RotateCcw, Square } from "@lucide/vue";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -9,6 +9,8 @@ export interface ChatPromptSubmitProps {
   status?: "ready" | "streaming" | "submitted" | "error";
   /** Disable the button */
   disabled?: boolean;
+  /** Accessible label for the icon-only button */
+  ariaLabel?: string;
   /** Additional CSS classes */
   class?: HTMLAttributes["class"];
 }
@@ -30,6 +32,13 @@ const icon = computed(() => {
 
 const isSubmit = computed(() => props.status === "ready");
 
+const label = computed(() => {
+  if (props.ariaLabel) return props.ariaLabel;
+  if (props.status === "error") return "Retry message";
+  if (props.status === "streaming" || props.status === "submitted") return "Stop response";
+  return "Submit message";
+});
+
 function onClick() {
   if (props.status === "error") {
     emit("reload");
@@ -47,6 +56,7 @@ function onClick() {
     variant="default"
     size="icon-sm"
     :disabled="disabled"
+    :aria-label="label"
     :class="cn('size-7 rounded-md', props.class)"
     @click="!isSubmit && onClick()"
   >

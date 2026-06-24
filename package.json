@@ -14,10 +14,12 @@
         "typecheck": "nuxt typecheck",
         "lint": "eslint .",
         "lint:fix": "eslint --fix",
-        "registry:build": "tsx ./scripts/registry-build.ts"
+        "registry:build": "tsx ./scripts/registry-build.ts",
+        "registry:verify": "tsx ./scripts/registry-verify.ts"
     },
     "dependencies": {
         "@libsql/client": "^0.17.3",
+        "@lucide/vue": "^1.21.0",
         "@nuxt/content": "^3.13.0",
         "@nuxt/eslint": "^1.15.2",
         "@nuxt/icon": "^2.2.1",

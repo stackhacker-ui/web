@@ -38,6 +38,7 @@
         "shadcn-vue",
         "shadcn-vue-registry",
         "reka-ui",
+        "@lucide/vue",
         "lucide-vue-next"
       ]
     },

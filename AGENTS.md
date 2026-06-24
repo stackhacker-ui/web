@@ -11,6 +11,7 @@ Nuxt 4 documentation site with a built-in shadcn-vue component registry for dist
 - `pnpm lint:fix` — auto-fix
 - `pnpm typecheck` — `nuxt typecheck`
 - `pnpm registry:build` — generate registry JSON files into `public/r/`
+- `pnpm registry:verify` — verify generated registry dependency metadata after `registry:build`
 
 CI order: **lint → typecheck** (no tests)
 
@@ -32,6 +33,8 @@ CI order: **lint → typecheck** (no tests)
 2. `shadcn-vue build` outputs per-item JSON to `public/r/*.json`
 3. Intermediate file `app/registry/registry.json` is auto-deleted
 
+Run `pnpm registry:verify` after `pnpm registry:build` when registry dependencies change.
+
 Config: `registry.config.ts` and `components.json` `registries` field.
 
 ## Style conventions
@@ -39,7 +42,7 @@ Config: `registry.config.ts` and `components.json` `registries` field.
 - ESLint stylistic: **double quotes**, **semicolons**
 - Tailwind v4 via `@tailwindcss/vite` plugin — no `tailwind.config` file
 - shadcn-vue style: `new-york`, baseColor: `neutral`, CSS variables enabled
-- Icons: `lucide-vue-next`
+- Icons: `lucide-vue-next` for app and local shadcn primitives; registry-distributed items targeting shadcn-vue Create may use `@lucide/vue` when fresh `shadcn-vue add` verification requires it
 
 ## Content
 

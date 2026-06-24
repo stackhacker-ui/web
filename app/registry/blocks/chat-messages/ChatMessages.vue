@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from "vue";
 import type { UIMessage } from "ai";
-import { ArrowDown } from "lucide-vue-next";
+import { nextTick, onBeforeUnmount, onMounted, ref, watch } from "vue";
+import { ArrowDown } from "@lucide/vue";
 import type { ChatMessageAction } from "../chat-message/ChatMessage.vue";
 import { ChatMessage } from "../chat-message";
 import { Button } from "@/components/ui/button";
@@ -105,7 +106,7 @@ watch(
   <div
     ref="containerRef"
     data-slot="chat-messages"
-    :class="cn('flex flex-col gap-4', props.class)"
+    :class="cn('relative flex flex-col gap-4', props.class)"
   >
     <ChatMessage
       v-for="(message, index) in messages"
@@ -152,6 +153,7 @@ watch(
         variant="outline"
         size="icon-sm"
         class="absolute right-1/2 translate-x-1/2 bottom-0 rounded-full shadow-md"
+        aria-label="Scroll to bottom"
         @click="scrollToBottom"
       >
         <ArrowDown class="size-4" />
