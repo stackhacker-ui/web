@@ -6,6 +6,7 @@ export const sectionCategories: Record<string, { id: string; title: string }[]> 
   ],
   "components": [
     { id: "overview", title: "Overview" },
+    { id: "content", title: "Content" },
     { id: "element", title: "Element" },
     { id: "chat", title: "AI Chat" },
   ],
