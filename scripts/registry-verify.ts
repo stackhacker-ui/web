@@ -91,6 +91,10 @@ const expectedItems: Record<string, ExpectedRegistryItem> = {
     dependencies: ["@lucide/vue", "ai"],
     registryDependencies: ["button", "tooltip"],
   },
+  "docs-search-modal": {
+    dependencies: ["@lucide/vue"],
+    registryDependencies: [],
+  },
 };
 
 if (registryIndex) {
