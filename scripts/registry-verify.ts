@@ -103,6 +103,10 @@ const expectedItems: Record<string, ExpectedRegistryItem> = {
     dependencies: ["@lucide/vue"],
     registryDependencies: ["button", "collapsible"],
   },
+  "home-cta": {
+    dependencies: [],
+    registryDependencies: ["button"],
+  },
 };
 
 if (registryIndex) {
