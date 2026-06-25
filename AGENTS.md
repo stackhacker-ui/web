@@ -44,6 +44,12 @@ Config: `registry.config.ts` and `components.json` `registries` field.
 - shadcn-vue style: `new-york`, baseColor: `neutral`, CSS variables enabled
 - Icons: `lucide-vue-next` for app and local shadcn primitives; registry-distributed items targeting shadcn-vue Create may use `@lucide/vue` when fresh `shadcn-vue add` verification requires it
 
+## Commit conventions
+
+- Use commitizen/czg-style Conventional Commits: `<type>(<scope>): <Subject>`.
+- Keep `type` and `scope` lowercase; capitalize the first letter of `Subject`.
+- Use imperative mood and omit trailing periods, e.g. `feat(registry): Add pricing plans block`.
+
 ## Content
 
 - `content.config.ts` defines the docs collection with `category` field: `element | content | marketing | chat | overview`
