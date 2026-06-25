@@ -99,6 +99,10 @@ const expectedItems: Record<string, ExpectedRegistryItem> = {
     dependencies: ["@lucide/vue"],
     registryDependencies: ["badge", "button", "card"],
   },
+  "reasoning-disclosure": {
+    dependencies: ["@lucide/vue"],
+    registryDependencies: ["button", "collapsible"],
+  },
 };
 
 if (registryIndex) {
