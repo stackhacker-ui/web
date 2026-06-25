@@ -9,7 +9,7 @@ export default defineContentConfig({
       },
       schema: z.object({
         category: z
-          .enum(["element", "content", "chat", "overview"])
+          .enum(["element", "content", "marketing", "chat", "overview"])
           .optional(),
       }),
     }),
