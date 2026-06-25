@@ -95,6 +95,14 @@ const expectedItems: Record<string, ExpectedRegistryItem> = {
     dependencies: ["@lucide/vue"],
     registryDependencies: [],
   },
+  "page-toc": {
+    dependencies: [],
+    registryDependencies: [],
+  },
+  "docs-pager": {
+    dependencies: ["@lucide/vue"],
+    registryDependencies: [],
+  },
   "pricing-plans": {
     dependencies: ["@lucide/vue"],
     registryDependencies: ["badge", "button", "card"],
