@@ -46,7 +46,7 @@ Config: `registry.config.ts` and `components.json` `registries` field.
 
 ## Content
 
-- `content.config.ts` defines the docs collection with `category` field: `element | chat | overview`
+- `content.config.ts` defines the docs collection with `category` field: `element | content | chat | overview`
 - `@nuxt/content` v3 with D1 database (`content.database.type: "d1"`)
 - Markdown highlight disabled; `nuxt-shiki` module handles syntax highlighting instead
 
