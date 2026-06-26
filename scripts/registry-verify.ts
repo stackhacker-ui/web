@@ -99,6 +99,10 @@ const expectedItems: Record<string, ExpectedRegistryItem> = {
     dependencies: [],
     registryDependencies: [],
   },
+  "polaroid-card": {
+    dependencies: [],
+    registryDependencies: [],
+  },
   "docs-pager": {
     dependencies: ["@lucide/vue"],
     registryDependencies: [],
