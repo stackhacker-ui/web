@@ -119,6 +119,10 @@ const expectedItems: Record<string, ExpectedRegistryItem> = {
     dependencies: [],
     registryDependencies: ["button"],
   },
+  "feature-card": {
+    dependencies: [],
+    registryDependencies: [],
+  },
 };
 
 if (registryIndex) {
