@@ -127,6 +127,10 @@ const expectedItems: Record<string, ExpectedRegistryItem> = {
     dependencies: [],
     registryDependencies: [],
   },
+  "metrics-grid": {
+    dependencies: [],
+    registryDependencies: [],
+  },
 };
 
 if (registryIndex) {
