@@ -123,6 +123,10 @@ const expectedItems: Record<string, ExpectedRegistryItem> = {
     dependencies: [],
     registryDependencies: [],
   },
+  "feature-grid": {
+    dependencies: [],
+    registryDependencies: [],
+  },
   "changelog-timeline": {
     dependencies: [],
     registryDependencies: [],
