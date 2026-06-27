@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ref } from "vue";
 import { ChangelogTimeline, type ChangelogTimelineItem } from "~/registry/blocks/changelog-timeline";
 
 const releases: ChangelogTimelineItem[] = [
@@ -28,8 +27,6 @@ const releases: ChangelogTimelineItem[] = [
     body: "Align public template metadata, screenshots, and cross-template navigation.",
   },
 ];
-
-const retryCount = ref(0);
 </script>
 
 <template>
@@ -56,24 +53,5 @@ const retryCount = ref(0);
         </div>
       </template>
     </ChangelogTimeline>
-
-    <div class="grid gap-4 lg:grid-cols-3">
-      <ChangelogTimeline
-        loading
-        class="rounded-xl border bg-background p-4"
-      />
-      <ChangelogTimeline
-        :items="[]"
-        empty-title="No public releases"
-        empty-description="Connect your app-owned release source when you are ready to publish."
-        class="rounded-xl border bg-background p-4"
-      />
-      <ChangelogTimeline
-        error="The release source did not respond."
-        show-retry
-        class="rounded-xl border bg-background p-4"
-        @retry="retryCount++"
-      />
-    </div>
   </div>
 </template>
