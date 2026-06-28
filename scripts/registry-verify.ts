@@ -147,6 +147,10 @@ const expectedItems: Record<string, ExpectedRegistryItem> = {
     dependencies: [],
     registryDependencies: [],
   },
+  "work-experience": {
+    dependencies: [],
+    registryDependencies: [],
+  },
 };
 
 if (registryIndex) {
