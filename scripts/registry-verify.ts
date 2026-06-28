@@ -155,6 +155,10 @@ const expectedItems: Record<string, ExpectedRegistryItem> = {
     dependencies: ["@lucide/vue"],
     registryDependencies: [],
   },
+  "file-attachment": {
+    dependencies: ["@lucide/vue"],
+    registryDependencies: [],
+  },
 };
 
 if (registryIndex) {
