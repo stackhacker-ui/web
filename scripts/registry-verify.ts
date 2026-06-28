@@ -151,6 +151,10 @@ const expectedItems: Record<string, ExpectedRegistryItem> = {
     dependencies: [],
     registryDependencies: [],
   },
+  "model-picker": {
+    dependencies: ["@lucide/vue"],
+    registryDependencies: [],
+  },
 };
 
 if (registryIndex) {
