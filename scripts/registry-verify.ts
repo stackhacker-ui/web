@@ -159,6 +159,10 @@ const expectedItems: Record<string, ExpectedRegistryItem> = {
     dependencies: ["@lucide/vue"],
     registryDependencies: [],
   },
+  "feature-split": {
+    dependencies: [],
+    registryDependencies: [],
+  },
 };
 
 if (registryIndex) {
