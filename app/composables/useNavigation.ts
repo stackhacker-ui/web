@@ -8,7 +8,7 @@ export const sectionCategories: Record<string, { id: string; title: string }[]> 
     { id: "overview", title: "Overview" },
     { id: "content", title: "Content" },
     { id: "marketing", title: "Marketing" },
-    { id: "element", title: "Element" },
+    { id: "form", title: "Form" },
     { id: "chat", title: "AI Chat" },
   ],
 };
