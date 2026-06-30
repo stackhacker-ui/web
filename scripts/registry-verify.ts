@@ -167,9 +167,13 @@ const expectedItems: Record<string, ExpectedRegistryItem> = {
     dependencies: [],
     registryDependencies: [],
   },
+  "field": {
+    dependencies: ["@vueuse/core", "reka-ui"],
+    registryDependencies: [],
+  },
   "form-field": {
     dependencies: [],
-    registryDependencies: ["field", stackhackerDependency("form")],
+    registryDependencies: [stackhackerDependency("field"), stackhackerDependency("form")],
   },
 };
 

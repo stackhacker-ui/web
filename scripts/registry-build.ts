@@ -1,6 +1,6 @@
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { mkdir, readFile, unlink, writeFile } from "node:fs/promises";
+import { cp, mkdir, readFile, rm, unlink, writeFile } from "node:fs/promises";
 import pkg from "../package.json";
 import components from "../components.json";
 import { generateShadcnRegistry } from "shadcn-vue-registry";
@@ -13,6 +13,8 @@ import { x } from "tinyexec";
   const cwd = resolve(__dirname, "../");
   const registryPath = resolve(cwd, "./app/registry");
   const outputPath = resolve(cwd, "./public/r/");
+  const fieldBlockPath = resolve(registryPath, "blocks/field");
+  const fieldUiPath = resolve(registryPath, "components/ui/field");
   const config = {
     root: cwd,
     name: pkg.name,
@@ -27,11 +29,25 @@ import { x } from "tinyexec";
   const customItemNames = new Set(registryJson.items.map(item => item.name));
   const itemPackageDependencies: Record<string, string[]> = {
     "chat-message": ["@lucide/vue"],
+    "field": ["@vueuse/core", "reka-ui"],
   };
 
   for (const item of registryJson.items) {
     const dependencies = new Set(item.dependencies ?? []);
     const registryDependencies = new Set(item.registryDependencies ?? []);
+
+    if (item.name === "field") {
+      await rm(fieldUiPath, { recursive: true, force: true });
+      await mkdir(fieldUiPath, { recursive: true });
+      await cp(fieldBlockPath, fieldUiPath, { recursive: true });
+
+      item.type = "registry:ui";
+      item.files = item.files.map(file => ({
+        ...file,
+        path: file.path.replace("blocks/field", "components/ui/field"),
+        type: "registry:ui",
+      }));
+    }
 
     for (const dependency of itemPackageDependencies[item.name] ?? []) {
       dependencies.add(dependency);
@@ -75,6 +91,7 @@ import { x } from "tinyexec";
   });
 
   await unlink(registryJsonPath);
+  await rm(resolve(registryPath, "components"), { recursive: true, force: true });
 
   console.log("\n✓ Registry build complete");
   console.log("Registry files available at:\n  /r/registry.json\n  /r/{name}.json");
