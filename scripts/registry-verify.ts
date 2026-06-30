@@ -163,6 +163,14 @@ const expectedItems: Record<string, ExpectedRegistryItem> = {
     dependencies: [],
     registryDependencies: [],
   },
+  "form": {
+    dependencies: [],
+    registryDependencies: [],
+  },
+  "form-field": {
+    dependencies: [],
+    registryDependencies: ["field", stackhackerDependency("form")],
+  },
 };
 
 if (registryIndex) {
