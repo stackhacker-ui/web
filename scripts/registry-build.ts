@@ -1,6 +1,6 @@
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { cp, mkdir, readFile, rm, unlink, writeFile } from "node:fs/promises";
+import { cp, mkdir, readFile, rm, rmdir, unlink, writeFile } from "node:fs/promises";
 import pkg from "../package.json";
 import components from "../components.json";
 import { generateShadcnRegistry } from "shadcn-vue-registry";
@@ -15,6 +15,8 @@ import { x } from "tinyexec";
   const outputPath = resolve(cwd, "./public/r/");
   const fieldBlockPath = resolve(registryPath, "blocks/field");
   const fieldUiPath = resolve(registryPath, "components/ui/field");
+  const fieldUiParentPath = resolve(registryPath, "components/ui");
+  const fieldComponentsPath = resolve(registryPath, "components");
   const config = {
     root: cwd,
     name: pkg.name,
@@ -62,6 +64,7 @@ import { x } from "tinyexec";
         if (
           content.includes(`../${dependency}`)
           || content.includes(`@/components/${dependency}`)
+          || content.includes(`@/components/ui/${dependency}`)
         ) {
           registryDependencies.add(dependency);
         }
@@ -83,15 +86,20 @@ import { x } from "tinyexec";
   await mkdir(outputPath, { recursive: true });
   console.log(`✓ Output directory created: ${outputPath}`);
 
-  await x("shadcn-vue", ["build", "-c", registryPath, "-o", outputPath], {
-    nodeOptions: {
-      cwd,
-      shell: true,
-    },
-  });
-
-  await unlink(registryJsonPath);
-  await rm(resolve(registryPath, "components"), { recursive: true, force: true });
+  try {
+    await x("shadcn-vue", ["build", "-c", registryPath, "-o", outputPath], {
+      nodeOptions: {
+        cwd,
+        shell: true,
+      },
+    });
+  }
+  finally {
+    await unlink(registryJsonPath).catch(() => {});
+    await rm(fieldUiPath, { recursive: true, force: true });
+    await rmdir(fieldUiParentPath).catch(() => {});
+    await rmdir(fieldComponentsPath).catch(() => {});
+  }
 
   console.log("\n✓ Registry build complete");
   console.log("Registry files available at:\n  /r/registry.json\n  /r/{name}.json");

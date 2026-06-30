@@ -4,8 +4,13 @@ import registryConfig from "../registry.config";
 
 interface RegistryItem {
   name: string;
+  type?: string;
   dependencies?: string[];
   registryDependencies?: string[];
+  files?: Array<{
+    path?: string;
+    type?: string;
+  }>;
 }
 
 interface RegistryIndex {
@@ -62,6 +67,27 @@ function assertExactValues(itemName: string, fieldName: string, actual: string[]
   for (const value of actualSet) {
     if (!expectedSet.has(value)) {
       errors.push(`${itemName}: unexpected ${fieldName} ${value}`);
+    }
+  }
+}
+
+function assertFieldRegistryUiOutput(item: RegistryItem) {
+  if (item.type !== "registry:ui") {
+    errors.push(`field: expected type registry:ui, received ${item.type ?? "missing"}`);
+  }
+
+  if (!item.files?.length) {
+    errors.push("field: expected registry files under components/ui/field");
+    return;
+  }
+
+  for (const file of item.files) {
+    if (file.type !== "registry:ui") {
+      errors.push(`field: expected file ${file.path ?? "missing"} type registry:ui, received ${file.type ?? "missing"}`);
+    }
+
+    if (!file.path?.startsWith("components/ui/field/")) {
+      errors.push(`field: expected file path under components/ui/field, received ${file.path ?? "missing"}`);
     }
   }
 }
@@ -200,6 +226,10 @@ for (const [name, expected] of Object.entries(expectedItems)) {
 
   assertExactValues(name, "package dependency", item.dependencies ?? [], expected.dependencies ?? []);
   assertExactValues(name, "registry dependency", item.registryDependencies ?? [], expected.registryDependencies ?? []);
+
+  if (name === "field") {
+    assertFieldRegistryUiOutput(item);
+  }
 }
 
 if (errors.length > 0) {
