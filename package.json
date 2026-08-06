@@ -18,7 +18,7 @@
         "registry:verify": "tsx ./scripts/registry-verify.ts"
     },
     "dependencies": {
-        "@libsql/client": "^0.17.3",
+        "@libsql/client": "^0.17.4",
         "@lucide/vue": "^1.21.0",
         "@nuxt/content": "^3.13.0",
         "@nuxt/eslint": "^1.15.2",
