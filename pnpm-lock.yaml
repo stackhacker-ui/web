@@ -6,7 +6,7 @@ settings:
 
 overrides:
   defu: ^6.1.7
-  devalue: ^5.7.1
+  devalue: ^5.9.0
   flatted: ^3.4.0
   h3: 1.15.11
   hono: 4.12.18
