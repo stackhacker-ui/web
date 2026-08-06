@@ -56,7 +56,8 @@
         "shiki": "^3.23.0",
         "tinyexec": "^1.1.2",
         "tsx": "^4.21.0",
-        "typescript": "^5.9.3"
+        "typescript": "^5.9.3",
+        "vue-tsc": "3.2.7"
     },
     "lint-staged": {
         "*.+(ts|tsx|vue)": [
