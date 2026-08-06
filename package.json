@@ -73,7 +73,7 @@
             "hono": "4.12.18",
             "fast-uri": "3.1.2",
             "ip-address": "10.1.1",
-            "postcss": "^8.5.12",
+            "postcss": "^8.5.25",
             "@esbuild-kit/core-utils>esbuild": "0.25.12",
             "minimatch@3.1.5>brace-expansion": "1.1.13",
             "micromatch@4.0.8>picomatch": "2.3.2"
