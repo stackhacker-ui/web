@@ -22,8 +22,8 @@ importers:
         specifier: ^0.17.4
         version: 0.17.4
       '@lucide/vue':
-        specifier: ^1.21.0
-        version: 1.21.0(vue@3.5.41(typescript@5.9.3))
+        specifier: ^1.28.0
+        version: 1.30.0(vue@3.5.41(typescript@5.9.3))
       '@nuxt/content':
         specifier: ^3.13.0
         version: 3.13.0(@libsql/client@0.17.4)(drizzle-orm@0.45.2(@cloudflare/workers-types@4.20260307.1)(@libsql/client@0.17.4)(@opentelemetry/api@1.9.0))(esbuild@0.28.1)(magic-string@0.30.21)(magicast@0.5.4)(oxc-parser@0.128.0)(rolldown@1.2.3)(rollup@4.62.4)(vite@8.2.0(@types/node@24.12.2)(esbuild@0.28.1)(jiti@2.7.0)(stylus@0.57.0)(terser@5.49.2)(tsx@4.21.0)(yaml@2.9.0))
@@ -765,8 +765,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@lucide/vue@1.21.0':
-    resolution: {integrity: sha512-eoFn3tppjKAc12ZqdnRSMFdtwQ1ZMRQFb6SV1Eub6Y8kU28ccnqKeSFdnur9hMg8gIbosU2Y3WFJr/J/xS/IlQ==}
+  '@lucide/vue@1.30.0':
+    resolution: {integrity: sha512-EF+N6eH/zaaZN0EY0y0URvKjMAj4QUeVtdDeFxjWHjhXihve/pBge+ahaeXLtqa1np0Ax5vsZEIsOTcsGZwPNQ==}
     peerDependencies:
       vue: '>=3.0.1'
 
@@ -7542,7 +7542,7 @@ snapshots:
   '@libsql/win32-x64-msvc@0.5.29':
     optional: true
 
-  '@lucide/vue@1.21.0(vue@3.5.41(typescript@5.9.3))':
+  '@lucide/vue@1.30.0(vue@3.5.41(typescript@5.9.3))':
     dependencies:
       vue: 3.5.41(typescript@5.9.3)
 
