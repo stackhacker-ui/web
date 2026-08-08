@@ -10,19 +10,18 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node: [24]
     steps:
       - name: Checkout
         uses: actions/checkout@v6
       - name: Install pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6
       - name: Install node
         uses: actions/setup-node@v6
         with:
-          node-version: ${{ matrix.node }}
+          node-version-file: .node-version
           cache: pnpm
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
       - name: Lint
         run: pnpm run lint
       - name: Typecheck
