@@ -64,8 +64,8 @@ importers:
         specifier: ^9.39.5
         version: 9.39.5(jiti@2.7.0)
       lucide-vue-next:
-        specifier: ^0.554.0
-        version: 0.554.0(vue@3.5.41(typescript@5.9.3))
+        specifier: ^0.577.0
+        version: 0.577.0(vue@3.5.41(typescript@5.9.3))
       nuxt:
         specifier: ^4.5.2
         version: 4.5.2(@babel/plugin-syntax-jsx@7.29.7(@babel/core@7.29.7))(@babel/plugin-syntax-typescript@7.29.7(@babel/core@7.29.7))(@libsql/client@0.17.4)(@oxc-project/types@0.143.0)(@parcel/watcher@2.5.6)(@types/node@24.12.2)(@vue/compiler-sfc@3.5.41)(cac@7.0.0)(commander@14.0.3)(db0@0.3.4(@libsql/client@0.17.4)(drizzle-orm@0.45.2(@cloudflare/workers-types@4.20260307.1)(@libsql/client@0.17.4)(@opentelemetry/api@1.9.0)))(drizzle-orm@0.45.2(@cloudflare/workers-types@4.20260307.1)(@libsql/client@0.17.4)(@opentelemetry/api@1.9.0))(esbuild@0.28.1)(eslint@9.39.5(jiti@2.7.0))(ioredis@5.11.1)(lightningcss@1.33.0)(magicast@0.5.4)(optionator@0.9.4)(oxc-parser@0.128.0)(rolldown@1.2.3)(rollup-plugin-visualizer@7.0.1(rolldown@1.2.3)(rollup@4.62.4))(rollup@4.62.4)(srvx@0.11.22)(stylus@0.57.0)(terser@5.49.2)(tsx@4.21.0)(typescript@5.9.3)(vite@8.2.0(@types/node@24.12.2)(esbuild@0.28.1)(jiti@2.7.0)(stylus@0.57.0)(terser@5.49.2)(tsx@4.21.0)(yaml@2.9.0))(vue-tsc@3.2.7(typescript@5.9.3))(yaml@2.9.0)
@@ -4761,8 +4761,8 @@ packages:
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
 
-  lucide-vue-next@0.554.0:
-    resolution: {integrity: sha512-nDchDVm/J3mv+7aYtDh7aLkeBVtzDNyaelKEOlhAE0MKMtDfB9fFatx2siqZUBYhLHjMK5DZnaAC/ODT9vQ63Q==}
+  lucide-vue-next@0.577.0:
+    resolution: {integrity: sha512-py05bAfv9SHVJqscbiOnjcnLlEmOffA58a+7XhZuFxrs6txe1E8VoR1ngWGTYO+9aVKABAz8l3ee3PqiQN9QPA==}
     deprecated: Package deprecated. Please use @lucide/vue instead.
     peerDependencies:
       vue: '>=3.0.1'
@@ -11914,7 +11914,7 @@ snapshots:
     dependencies:
       yallist: 3.1.1
 
-  lucide-vue-next@0.554.0(vue@3.5.41(typescript@5.9.3)):
+  lucide-vue-next@0.577.0(vue@3.5.41(typescript@5.9.3)):
     dependencies:
       vue: 3.5.41(typescript@5.9.3)
 
