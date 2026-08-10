@@ -22,7 +22,7 @@ importers:
         specifier: ^0.17.4
         version: 0.17.4
       '@lucide/vue':
-        specifier: ^1.29.0
+        specifier: ^1.30.0
         version: 1.30.0(vue@3.5.41(typescript@5.9.3))
       '@nuxt/content':
         specifier: ^3.15.2
