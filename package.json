@@ -39,7 +39,7 @@
         "lucide-vue-next": "^0.577.0",
         "nuxt": "^4.5.2",
         "nuxt-og-image": "^6.7.8",
-        "reka-ui": "^2.10.3",
+        "reka-ui": "^2.10.4",
         "shadcn-nuxt": "2.8.2",
         "tailwind-merge": "^3.6.0",
         "tailwindcss": "^4.3.3",
