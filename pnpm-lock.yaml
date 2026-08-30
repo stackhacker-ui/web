@@ -46,7 +46,7 @@ importers:
         specifier: ^14.4.0
         version: 14.4.0(307ddfe76d31ab0d0a31d1b167703ff6)
       ai:
-        specifier: ^6.0.270
+        specifier: ^6.0.271
         version: 6.0.271(zod@4.3.6)
       class-variance-authority:
         specifier: ^0.7.1
