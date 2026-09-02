@@ -58,7 +58,7 @@
         "shadcn-vue-registry": "0.0.0-beta.11",
         "shiki": "^3.23.0",
         "tinyexec": "^1.3.0",
-        "tsx": "^4.23.12",
+        "tsx": "^4.23.13",
         "typescript": "^5.9.3",
         "vue-tsc": "3.3.11"
     },
