@@ -48,7 +48,7 @@
         "vue-router": "^5.3.1"
     },
     "devDependencies": {
-        "@types/node": "^24.13.3",
+        "@types/node": "^24.13.4",
         "fs-extra": "^11.4.0",
         "glob": "^13.0.6",
         "lint-staged": "^16.4.0",
