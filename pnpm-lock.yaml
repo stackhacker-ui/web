@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  devalue: ^5.9.2
+  devalue: ^5.9.4
   postcss: ^8.5.28
   brace-expansion: ^5.0.12
   minimatch@3.1.5>brace-expansion: 1.1.21
@@ -3305,8 +3305,8 @@ packages:
     resolution: {integrity: sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==}
     engines: {node: '>=8'}
 
-  devalue@5.9.2:
-    resolution: {integrity: sha512-po4PAY5c53tw5XMocSnf8A/5OHhbbUftpr93aEN6BBoAdntUmK7vu7wOATqvt7cXO7m1Cl4gMVn6p7n6n4mj0w==}
+  devalue@5.9.4:
+    resolution: {integrity: sha512-sPAT4pztbu6586/hrhOnMKS17IJrvg12mXiSPSS3W5qDeN2RGgvZ0diZCm31dBbnevfVmujNO3IM2wrS4Y2Rhg==}
 
   devframe@0.8.2:
     resolution: {integrity: sha512-oodQXEQnrvufA1so/E058Z3SG3bk9AlUE5+NIAsyx5ZJH9P/oX6WMxjC0bs5PPwtKbS7pBHjxja2AD8EwGE8/Q==}
@@ -8114,7 +8114,7 @@ snapshots:
       consola: 3.4.2
       defu: 6.1.7
       destr: 2.0.5
-      devalue: 5.9.2
+      devalue: 5.9.4
       errx: 0.1.2
       escape-string-regexp: 5.0.0
       exsolve: 1.1.1
@@ -10286,7 +10286,7 @@ snapshots:
 
   detect-libc@2.1.2: {}
 
-  devalue@5.9.2: {}
+  devalue@5.9.4: {}
 
   devframe@0.8.2(cac@7.0.0)(srvx@0.11.22):
     dependencies:
@@ -12339,7 +12339,7 @@ snapshots:
       chrome-launcher: 1.2.1
       consola: 3.4.2
       defu: 6.1.7
-      devalue: 5.9.2
+      devalue: 5.9.4
       exsolve: 1.1.1
       fnv1a-64: 0.1.2
       lightningcss: 1.33.0
@@ -12455,7 +12455,7 @@ snapshots:
       consola: 3.4.2
       cookie-es: 3.1.1
       defu: 6.1.7
-      devalue: 5.9.2
+      devalue: 5.9.4
       errx: 0.1.2
       escape-string-regexp: 5.0.0
       exsolve: 1.1.1
