@@ -34,7 +34,7 @@
         "class-variance-authority": "^0.7.1",
         "clsx": "^2.1.1",
         "drizzle-kit": "^0.31.11",
-        "drizzle-orm": "^0.45.2",
+        "drizzle-orm": "^0.45.3",
         "eslint": "^9.39.5",
         "lucide-vue-next": "^0.577.0",
         "nuxt": "^4.5.2",
