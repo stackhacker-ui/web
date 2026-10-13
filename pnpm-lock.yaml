@@ -46,8 +46,8 @@ importers:
         specifier: ^14.4.0
         version: 14.4.0(@nuxt/schema@4.6.0)(confbox@0.3.1)(dotenv@17.4.2)(giget@3.3.1)(jiti@2.7.0)(magic-string@1.4.3)(mlly@1.8.2)(nuxt@4.6.0(a1f72a74ca57b7a70cdd51492f41c2f1))(oxc-parser@0.151.0)(rolldown@1.2.13)(unplugin@3.4.0(esbuild@0.28.2)(rolldown@1.2.13)(rollup@4.62.4)(vite@8.3.4(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(stylus@0.57.0)(terser@5.49.2)(tsx@4.23.15)(yaml@2.9.0)))(vue@3.5.43(typescript@5.9.3))
       ai:
-        specifier: ^6.0.302
-        version: 6.0.302(zod@4.3.6)
+        specifier: ^6.0.303
+        version: 6.0.304(zod@4.3.6)
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -136,8 +136,8 @@ importers:
 
 packages:
 
-  '@ai-sdk/gateway@3.0.211':
-    resolution: {integrity: sha512-lv/psn0oKSUUgx1G8gXpcvETunpKbD73fyfjacqk3KloxgDKFfTQLmHlfdaZjCRd6fPtu7PlKCo6DN4CFde47A==}
+  '@ai-sdk/gateway@3.0.212':
+    resolution: {integrity: sha512-iTJSim/6LuSxiG3RF0FWU7bEQ8dF6EplcWci5Km4Vc8SUcR8vxFuC7T/pfCutW00pI/3WYsHm8RCQ5141/Xykw==}
     engines: {node: '>=18'}
     peerDependencies:
       zod: ^3.25.76 || ^4.1.8
@@ -2715,8 +2715,8 @@ packages:
     resolution: {integrity: sha512-MnA+YT8fwfJPgBx3m60MNqakm30XOkyIoH1y6huTQvC0PwZG7ki8NacLBcrPbNoo8vEZy7Jpuk7+jMO+CUovTQ==}
     engines: {node: '>= 14'}
 
-  ai@6.0.302:
-    resolution: {integrity: sha512-VnXbJm75P1KufEkl7WoKEvd9oMJEwrNjfajEM/HDHWzk5TydVEsTWkBaxWTXkZTjhrGl8lpPTyNEEF+yLq0UaA==}
+  ai@6.0.304:
+    resolution: {integrity: sha512-xhKVjs+pEGLVZ8mIbkv1UTThsNYnlr7lQRkroKFZDPYqhlPyUHGE+ICQsbAX4wyP0ELjej5/Bhd3a2owIf+UhQ==}
     engines: {node: '>=18'}
     peerDependencies:
       zod: ^3.25.76 || ^4.1.8
@@ -7084,7 +7084,7 @@ packages:
 
 snapshots:
 
-  '@ai-sdk/gateway@3.0.211(zod@4.3.6)':
+  '@ai-sdk/gateway@3.0.212(zod@4.3.6)':
     dependencies:
       '@ai-sdk/provider': 3.0.18
       '@ai-sdk/provider-utils': 4.0.57(zod@4.3.6)
@@ -9906,9 +9906,9 @@ snapshots:
 
   agent-base@7.1.4: {}
 
-  ai@6.0.302(zod@4.3.6):
+  ai@6.0.304(zod@4.3.6):
     dependencies:
-      '@ai-sdk/gateway': 3.0.211(zod@4.3.6)
+      '@ai-sdk/gateway': 3.0.212(zod@4.3.6)
       '@ai-sdk/provider': 3.0.18
       '@ai-sdk/provider-utils': 4.0.57(zod@4.3.6)
       '@opentelemetry/api': 1.9.0
