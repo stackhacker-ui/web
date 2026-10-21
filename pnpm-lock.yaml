@@ -22,8 +22,8 @@ importers:
         specifier: ^0.18.0
         version: 0.18.0
       '@lucide/vue':
-        specifier: ^1.57.0
-        version: 1.58.0(vue@3.5.44(typescript@5.9.3))
+        specifier: ^1.59.0
+        version: 1.60.0(vue@3.5.44(typescript@5.9.3))
       '@nuxt/content':
         specifier: ^3.16.2
         version: 3.16.2(@libsql/client@0.18.0)(@nuxt/schema@4.6.2)(@oxc-project/types@0.153.0)(confbox@0.3.1)(dotenv@17.4.2)(esbuild@0.28.2)(giget@3.3.1)(magic-string@1.4.3)(magicast@0.5.5)(mlly@1.8.2)(oxc-parser@0.151.0)(rolldown@1.2.13)(rollup@4.62.4)(vite@8.3.4(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(stylus@0.57.0)(terser@5.49.2)(tsx@4.23.15)(yaml@2.9.0))
@@ -759,8 +759,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@lucide/vue@1.58.0':
-    resolution: {integrity: sha512-HW7yrGw9OUC1TzldLep1d4p1Uc1OCRWLJwzKHm9C3V9Z4/9GADN84NDlyeTzgrcD8yxXs8/SVh8CpKFaA+OPRg==}
+  '@lucide/vue@1.60.0':
+    resolution: {integrity: sha512-rARqkhMbeBa+YWgDNInZavBAt+FUxdEyOx/gfrMZ466im0EnBTWgSKBra08bHhnRytyv4AGucf1+9AhrEDQqMA==}
     peerDependencies:
       vue: '>=3.0.1'
 
@@ -7496,7 +7496,7 @@ snapshots:
   '@libsql/win32-x64-msvc@0.5.29':
     optional: true
 
-  '@lucide/vue@1.58.0(vue@3.5.44(typescript@5.9.3))':
+  '@lucide/vue@1.60.0(vue@3.5.44(typescript@5.9.3))':
     dependencies:
       vue: 3.5.44(typescript@5.9.3)
 
