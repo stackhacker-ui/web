@@ -22,7 +22,7 @@
     },
     "dependencies": {
         "@libsql/client": "^0.18.0",
-        "@lucide/vue": "^1.61.0",
+        "@lucide/vue": "^1.62.0",
         "@nuxt/content": "^3.16.2",
         "@nuxt/eslint": "^1.17.0",
         "@nuxt/icon": "^2.6.1",
