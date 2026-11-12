@@ -30,7 +30,7 @@
         "@tailwindcss/vite": "^4.3.5",
         "@vueuse/core": "^14.4.0",
         "@vueuse/nuxt": "^14.4.0",
-        "ai": "^6.0.325",
+        "ai": "^6.0.326",
         "class-variance-authority": "^0.7.1",
         "clsx": "^2.1.1",
         "drizzle-kit": "^0.31.11",
