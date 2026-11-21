@@ -101,8 +101,8 @@ importers:
         specifier: ^11.4.1
         version: 11.4.1
       glob:
-        specifier: ^13.0.6
-        version: 13.0.6
+        specifier: ^14.0.0
+        version: 14.0.4
       lint-staged:
         specifier: ^16.4.0
         version: 16.4.0
